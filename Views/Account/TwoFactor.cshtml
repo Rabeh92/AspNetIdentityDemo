@@ -1,0 +1,19 @@
+﻿@model AspNetIdentityDemo.ViewModel.TwoFactorViewModel
+@{
+    ViewBag.Title = "TwoFactor";
+}
+
+<h2>Two Factor Authentification</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.HiddenFor(vm=>vm.Provider)
+        <label>Code</label>
+        @Html.TextBoxFor(vm=>vm.Code,new {@class="form-control" })
+    </div>
+    <div class="form-check">
+        @Html.CheckBoxFor(vm=>vm.RememberBrowser,new {@class="form-check-input" })
+        <label class="form-check-label">Remember browser</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+}

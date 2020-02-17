@@ -1,0 +1,33 @@
+﻿@model AspNetIdentityDemo.ViewModel.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+<div class="form-group">
+    @Html.LabelFor(vm => vm.UserName)
+    @Html.TextBoxFor(vm => vm.UserName,new {@class="form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(vm => vm.Password)
+    @Html.PasswordFor(vm => vm.Password, new { @class = "form-control" })
+   
+</div>
+<div class="form-group">
+    @Html.LabelFor(vm => vm.FullName)
+    @Html.TextBoxFor(vm => vm.FullName, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(vm => vm.AdresseLine)
+    @Html.TextBoxFor(vm => vm.AdresseLine, new { @class = "form-control" })
+</div>
+<div class="form-group">
+    @Html.LabelFor(vm => vm.Country)
+    @Html.TextBoxFor(vm => vm.Country, new { @class = "form-control" })
+</div>
+<input type="submit" class="btn btn-primary" value="validate" />
+    
+}
+
